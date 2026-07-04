@@ -1,0 +1,99 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\newcommand{\cvsep}{%
+	\hspace{0.55em}%
+	{\normalfont\rule[0em]{0.40pt}{0.88em}}%
+	\hspace{0.55em}%
+}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\vspace*{-1.2cm}
+
+\noindent
+\begin{minipage}[t]{0.74\textwidth}
+	\vspace{0pt}
+	{\Huge\bfseries 张三}
+	
+	\vspace{1em}
+	
+{\fontsize{10pt}{13pt}\selectfont
+	\begin{tabular}{@{}L{3.4cm}@{\hspace{0.45em}\hspace{0.45em}}L{3.8cm}@{\hspace{0.45em}\hspace{0.45em}}L{5.1cm}@{}}
+		籍贯：江苏省扬州市 & 民族：汉族 \\[0.35em]
+		生日：2004.09.24 & 电话：(+86) 15895742116 & 邮箱：15895742116@163.com
+	\end{tabular}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{2.8cm}
+	\vspace{0pt}
+	\centering
+	\raisebox{0.45cm}{%
+		\rule{2.5cm}{3.2cm}%
+	}
+\end{minipage}
+
+\vspace{-3 em}
+ 
+% \section{\faGraduationCap\ 教育背景}
+\section{教育背景}
+\datedsubsection{\textbf{XX大学} \hspace*{2em} 人工智能\hspace*{2em}}{2023.9 - 2027.6}
+\textbf{专业排名4/69}\hspace{2em} \textbf{GPA 3.95/4.5} \hspace{2em} \textbf{英语水平：}\textbf{CET-4： 640\hspace{2em} CET-6: 565} \\
+\textbf{相关课程：} 矩阵计算(97)、线性代数(97)、数据库原理与应用(95)、python程序设计(95)、机器学习(93)\\
+\textbf{荣誉奖项:}校三好学生、校优秀学生\\
+\textbf{软件技能：}熟悉C++、python、pytorch、latex, 熟悉基本的linux命令行操作。 
+
+% \end{itemize}
+
+\section{项目经历}
+\datedsubsection{\textbf{基于 MADRL 的无人机路径规划}\cvsep\textbf{第一作者}}{2025.9}
+
+\begin{itemize}
+	\item \textbf{项目概述：} 面向多无人机辅助移动群智感知场景，针对动态用户分布、部分可观测状态与有限通信范围下的协同轨迹规划问题，构建基于多智能体深度强化学习的分布式决策框架；综合建模感知覆盖质量、信息时效性、通信吞吐量与能耗开销，并通过协同通信机制提升多无人机系统的任务执行效率，相关指标较 baseline 提升 4.09\%--19.47\%。
+	
+	\item \textbf{本人贡献：}负责项目整体技术路线设计与核心方法实现。完成不同基线方法的复现实验、参数敏感性分析、消融实验设计、实验结果可视化与性能对比分析，并负责论文主体撰写、图表整理、审稿意见回复和返修稿修改。
+	
+	\item \textbf{项目成果：}论文 \textit{MetaComm: Multi-Agent Reinforcement Learning Based Trajectory Planning in Multi-UAV Assisted Crowd Sensing Systems}，已投稿至 \textit{IEEE Internet of Things Journal}（SCI 二区 TOP 期刊）。目前已根据审稿意见完成大修并已完成返稿。
+\end{itemize}
+
+
+\datedsubsection{\textbf{VEC 任务卸载优化：通信辅助离线 Meta-MARL}\cvsep\textbf{学生一作 / 第二作者}}{2026.2}
+\begin{itemize}
+	\item \textbf{项目概述：} 面向部分可观测 VEC 系统中的多车辆任务卸载问题，构建通信辅助离线元多智能体强化学习框架 COM-MAAC，结合车辆间通信、离线强化学习和元学习机制，提升多车辆在动态边缘计算环境下的协同卸载决策能力与跨场景泛化能力。
+	
+	\item \textbf{本人贡献：} 参与 VEC 任务卸载建模与实验实现，完成训练流程搭建、通信机制验证、对比实验与结果分析。
+	
+	\item \textbf{项目成果：} 论文 \textit{Communication-assisted Offline Meta Multi-Agent Reinforcement Learning for Task Offloading in Partially Observable VEC Systems} 已投稿至 \textit{IEEE Transactions on Mobile Computing}（TMC，CCF-A），目前处于审稿阶段。
+\end{itemize}
+
+\datedsubsection{\textbf{通过 GRPO 强化小型 LM 的高效算术推理}\cvsep\textbf{个人项目}}{2026.3}
+\begin{itemize}
+	\item \textbf{项目概述：} 基于 Qwen2.5-0.5B 和 GRPO 构建高效算术推理训练框架，通过多轮交互环境、结构化工具调用和混合奖励机制，引导模型学习调用外部计算工具完成复杂算术推理，提升模型的工具调用稳定性与答案可靠性,后训练准确率提高33.6\%
+	\item \textbf{本人贡献：} 负责设计与迭代模型系统提示词，构建算术推理环境和评估数据集，设计结合 LLM 评判与代码验证的混合奖励函数，并基于 verl 框架完成模型训练、实验评估与结果分析。
+\end{itemize}
+
+\datedsubsection{\textbf{MathorCup 高校数学建模挑战赛 C 题}\cvsep\textbf{建模手}}{2026.04}
+\begin{itemize}[parsep=0.2ex]
+	\item \textbf{项目概述：} 围绕中医体质评价与西医量化体测数据融合问题，基于体质积分、血常规指标、体测指标和活动量表评分等多源数据，构建面向痰湿体质风险识别与干预优化的数学建模方案。
+	
+	\item \textbf{本人贡献：} 承担主要建模工作，风险分层模型设计、阈值规则提取和干预优化模型构建；参与多目标优化与动态规划求解流程设计，并负责核心模型公式推导、结果解释。
+\end{itemize}
+
+\section{竞赛经历}
+\vspace{-0.3em}
+\noindent\textbf{蓝桥杯全国软件和信息技术专业人才大赛}\cvsep \textbf{C/C++ 程序设计大学 B 组}\cvsep \textbf{省级二等奖}\hfill 2025.04\\[0.2em]
+\noindent\textbf{全国大学生英语竞赛}\cvsep \textbf{国家级二等奖}\hfill 2025.05
+
+\section{个人评价}
+\noindent
+热爱运动，长期参与徒步、羽毛球等体育活动，注重身体素质提升，具备较强的自律性、毅力和团队协作意识；具备较强的探索精神，持续关注强化学习等人工智能前沿方向，能够主动学习新方法并应用于科研实践。
+\end{document}
